@@ -20,7 +20,7 @@ public class AppConfig {
 
 	private final String URL = "url";
 	private final String USER = "dbuser";
-	//private final String DRIVER = "driver";
+	private final String DRIVER = "driver";
 	private final String PASSWORD = "dbpassword";
 
 	@Bean
@@ -29,7 +29,7 @@ public class AppConfig {
 		driverManagerDataSource.setUrl(environment.getProperty(URL));
 		driverManagerDataSource.setUsername(environment.getProperty(USER));
 		driverManagerDataSource.setPassword(environment.getProperty(PASSWORD));
-		//driverManagerDataSource.setDriverClassName(environment.getProperty(DRIVER));
+		driverManagerDataSource.setDriverClassName(environment.getProperty(DRIVER));
 		return driverManagerDataSource;
 	}
 }
